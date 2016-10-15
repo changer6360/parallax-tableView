@@ -12,6 +12,7 @@
 		0119137D1DB2163C005DDCCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0119137B1DB2163C005DDCCB /* Main.storyboard */; };
 		0119137F1DB2163C005DDCCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0119137E1DB2163C005DDCCB /* Assets.xcassets */; };
 		011913821DB2163C005DDCCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011913801DB2163C005DDCCB /* LaunchScreen.storyboard */; };
+		0119138A1DB223B8005DDCCB /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011913891DB223B8005DDCCB /* ImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0119137E1DB2163C005DDCCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		011913811DB2163C005DDCCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011913831DB2163C005DDCCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		011913891DB223B8005DDCCB /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				011913771DB2163C005DDCCB /* AppDelegate.swift */,
 				011913791DB2163C005DDCCB /* ViewController.swift */,
 				0119137B1DB2163C005DDCCB /* Main.storyboard */,
+				011913891DB223B8005DDCCB /* ImageCell.swift */,
 				0119137E1DB2163C005DDCCB /* Assets.xcassets */,
 				011913801DB2163C005DDCCB /* LaunchScreen.storyboard */,
 				011913831DB2163C005DDCCB /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				0119137A1DB2163C005DDCCB /* ViewController.swift in Sources */,
 				011913781DB2163C005DDCCB /* AppDelegate.swift in Sources */,
+				0119138A1DB223B8005DDCCB /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

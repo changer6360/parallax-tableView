@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="parallax_table" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,69 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="252" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="inr-lO-t4q">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="252" id="Yku-8C-Eie" customClass="ImageCell" customModule="parallax_table" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="252"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yku-8C-Eie" id="QQU-m4-V6L">
+                                            <frame key="frameInset" width="375" height="252"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-tR-Prs">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="cfh-8z-B2F"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBX-jd-gN2">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="Cxr-Qy-Isz"/>
+                                                        <constraint firstAttribute="height" constant="35" id="Tc4-6l-Mix"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <constraints>
+                                                <constraint firstItem="3pH-tR-Prs" firstAttribute="leading" secondItem="QQU-m4-V6L" secondAttribute="leading" id="4JN-E3-LBo"/>
+                                                <constraint firstItem="FBX-jd-gN2" firstAttribute="centerY" secondItem="QQU-m4-V6L" secondAttribute="centerY" id="JSm-xS-xVS"/>
+                                                <constraint firstAttribute="trailing" secondItem="3pH-tR-Prs" secondAttribute="trailing" id="eGr-bk-iCB"/>
+                                                <constraint firstItem="3pH-tR-Prs" firstAttribute="top" secondItem="QQU-m4-V6L" secondAttribute="top" id="gZ2-zH-K3F"/>
+                                                <constraint firstItem="FBX-jd-gN2" firstAttribute="centerX" secondItem="QQU-m4-V6L" secondAttribute="centerX" id="mjb-Zw-ejh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageTitle" destination="FBX-jd-gN2" id="Z0v-U6-43H"/>
+                                            <outlet property="parallaxImage" destination="3pH-tR-Prs" id="PKj-Ga-zjf"/>
+                                            <outlet property="parallaxImageHeight" destination="cfh-8z-B2F" id="LQw-Ok-ThB"/>
+                                            <outlet property="parallaxTopConstraint" destination="gZ2-zH-K3F" id="f24-dk-pt1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="inr-lO-t4q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cAf-6W-grf"/>
+                            <constraint firstAttribute="trailing" secondItem="inr-lO-t4q" secondAttribute="trailing" id="fnN-Bi-maR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="inr-lO-t4q" secondAttribute="bottom" id="hVY-q6-AvG"/>
+                            <constraint firstItem="inr-lO-t4q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wXG-Sq-ix7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="inr-lO-t4q" id="0vv-WY-Sh9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image1" width="900" height="600"/>
+    </resources>
 </document>
